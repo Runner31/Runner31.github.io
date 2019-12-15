@@ -1,4 +1,4 @@
-var context, controller, rectangle, loop, enemy, collision, score, gameruntime, restartbtn, level,enemy2,enemy3;
+var context, controller, rectangle, loop, enemy, collision, score, gameruntime, restartbtn, level,enemy2,enemy3,music;
 
 ctx = document.querySelector("canvas").getContext('2d');
 
@@ -6,6 +6,7 @@ ctx.canvas.height = 300;
 ctx.canvas.width = 500;
 score = 0;
 level = 0;
+music = new sound("");
 gameruntime = true;
 
  rectangle = {

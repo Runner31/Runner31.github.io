@@ -238,7 +238,7 @@ let restart = function(){
 
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-if(rectangle.health <= 0){  //Thanks to queen-adreena on github fixed a potential bug! (was rectangle.health == 0)
+if(rectangle.health <= 0){  //Thanks to queen-adreena on reddit fixed a potential bug! (was rectangle.health == 0)
   ctx.fillStyle = "black";
   ctx.font = "30px Arial";
   ctx.fillText("GAME OVER", 150, 150);

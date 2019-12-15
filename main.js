@@ -264,22 +264,6 @@ startover = function (){
 
 }
 
-
-
-
-
-
-
-ctx.fillStyle = "black";
-ctx.font = "30px Arial";
-ctx.fillText("Score: " + score, 350, 30);
-ctx.fillText("Health: " + rectangle.health, 10,30);
-ctx.fillStyle = rectangle.color;
-ctx.beginPath();
-ctx.rect(rectangle.x,rectangle.y,rectangle.width,rectangle.height);
-ctx.fill();
-ctx.closePath();
-
 ctx.beginPath();
 ctx.rect(enemy.x,enemy.y,enemy.width,enemy.height);
 ctx.fillStyle = 'red';
@@ -298,7 +282,15 @@ ctx.fillStyle = 'red';
 ctx.fill();
 ctx.closePath();
 
-
+ctx.fillStyle = "black";
+ctx.font = "30px Arial";
+ctx.fillText("Score: " + score, 350, 30);
+ctx.fillText("Health: " + rectangle.health, 10,30);
+ctx.fillStyle = rectangle.color;
+ctx.beginPath();
+ctx.rect(rectangle.x,rectangle.y,rectangle.width,rectangle.height);
+ctx.fill();
+ctx.closePath();
 
 
 window.requestAnimationFrame(loop);

@@ -6,9 +6,9 @@ ctx.canvas.height = 300;
 ctx.canvas.width = 500;
 score = 0;
 level = 0;
-music = new sound("Music - 01 Galaxy.mp3");
+//music = new sound("Music - 01 Galaxy.mp3");
 gameruntime = true;
-music.play();
+//music.play();
  rectangle = {
   height:50,
   width:50,

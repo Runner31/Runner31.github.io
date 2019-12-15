@@ -23,13 +23,6 @@ gameruntime = true;
 
 };
 
-/*collision = function(object1,object2){
-  this.object1 = object1;
-  this.object2 = object2;
-
-if(object1.x + object )
-
-}*/
 
  enemy = {
   height:40,
@@ -244,6 +237,7 @@ if(rectangle.health <= 0){  //Thanks to queen-adreena on reddit fixed a potentia
   ctx.font = "30px Arial";
   ctx.fillText("GAME OVER", 150, 150);
   ctx.fillText("SCORE: " + score, 155, 200);
+  rectangle.health =0;
   enemy.y = 260;
   enemy.width = 40;
   enemy2.y = -300;

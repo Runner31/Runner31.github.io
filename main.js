@@ -1,4 +1,4 @@
-var context, controller, rectangle, loop, enemy, collision, score, gameruntime, restartbtn, level,enemy2,enemy3;
+var context, controller, rectangle, loop, enemy, collision, score, gameruntime, restartbtn, level,enemy2,enemy3, donatebtn, donate;
 
 ctx = document.querySelector("canvas").getContext('2d');
 
@@ -55,6 +55,13 @@ restartbtn = {
   height:50,
   width:100,
   x:400,
+  y:150,
+}
+
+donatebtn = {
+  height:50,
+  width:100,
+  x:0,
   y:150,
 }
 
@@ -252,6 +259,19 @@ if(rectangle.y - rectangle.height <= restartbtn.y && rectangle.x + rectangle.wid
   ctx.fillStyle = 'green';
     restart();
 }
+ 
+if(rectangle.y - rectangle.height <= donatebtn.y && rectangle.x<= donatebtn.x + donatebtn.width && gameruntime == false){
+  ctx.fillStyle = 'green';
+    donate();
+}
+ 
+ donate = function(){
+  console.log("User Donates");
+  document.getElementById('myform').submit();
+
+  restart();
+  startover();
+}
 
 startover = function (){
   ctx.beginPath();
@@ -261,6 +281,16 @@ startover = function (){
   ctx.closePath();
   ctx.fillStyle = 'black';
   ctx.fillText("reset", restartbtn.x + 20, restartbtn.y + 35);
+  ctx.closePath();
+ 
+  ctx.beginPath();
+  ctx.rect(donatebtn.x, donatebtn.y, donatebtn.width + 20, donatebtn.height);
+  ctx.fillStyle = 'yellow';
+  ctx.fill();
+  ctx.closePath();
+  ctx.fillStyle = 'black';
+  ctx.fillText("Donate!", donatebtn.x + 5, donatebtn.y + 35);
+  ctx.closePath();
 
 }
 
